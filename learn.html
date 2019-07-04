@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Output</title>
+</head>
+<style>
+	 body { font-size: 200%; }
+	
+    body { background-color: black; }
+
+    h1 { background-color: rgb(255,128,0); }
+
+    p { background-color: #FFFF56; }
+
+    div { height: 200px; width: 500px; }
+
+
+
+
+</style>
+
+<body>
+  <iframe src="http://ntry.com/scores/named_ladder/live.php" width="830" height="641" scrolling="no" frameborder="0"></iframe>
+    </iframe>
+	<br>
+	<input type=button style="WIDTH: 200pt; HEIGHT: 60pt" value="50% 도박 [ 1.93 배 ]" onclick = "ABC()">
+	<input type=button style="WIDTH: 200pt; HEIGHT: 60pt" value="30% 도박 [ 2.50 배 ]" onclick = "ABCD()">
+	<p id = "nowmoney"> 현재잔액 : 5000 P </p>
+	
+	<!--<p> 배팅금액 : <input id = givemoney > </p> -->
+
+
+
+
+
+
+
+
+
+	<script>
+		var money = 5000;
+		var money123 = document.getElementById("givemoney");
+		
+	function A()
+	{
+		alert(money1232);
+	}
+	function ABC(){
+		var gomoney = prompt("배팅할 금액을 입력하세요");
+		
+		
+		if(money < gomoney )
+		{
+			alert("너 탕진!");
+		}
+		else
+		{
+			
+			money = money - gomoney;
+			var result = Math.floor(Math.random() * 2) + 1;
+			if( result == 1){
+				money = money + gomoney * 1.93;
+				alert("성공! 현재잔액 : " + money);
+			}
+			else if(result == 2)
+			{
+				alert("실패! 현재잔액 : " + money);	
+			}
+			var str = document.getElementById("nowmoney");
+				str.innerHTML = "현재잔액 : "+money+" P";
+			
+			
+	
+		}
+			
+	}
+	function ABCD(){
+	
+		var gomoney = prompt("배팅할 금액을 입력하세요");
+		
+		if(money < gomoney )
+		{
+			alert("너 탕진!");
+		}
+		else
+		{
+			
+			money = money - gomoney;
+			var result = Math.floor(Math.random() * 3) + 1;
+			if( result == 1){
+				money = money + gomoney * 2.50;
+				alert("성공! 현재잔액 : " + money);
+			}
+			else
+			{
+				alert("실패! 현재잔액 : " + money);	
+			}
+			var str = document.getElementById("nowmoney");
+				str.innerHTML = "현재잔액 : "+money+" P";
+			
+			
+	
+		}
+			
+	}
+	
+	
+
+
+		
+
+
+		
+	</script>
+	
+</body>
+
+</html>
